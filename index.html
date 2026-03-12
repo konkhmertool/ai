@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Prompt Generator</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">កូនខ្មែរ TOOL</div>
+      <nav class="nav-menu">
+        <a href="#">ទំព័រដើម</a>
+        <a href="#">បង្កើតវីដេអូ</a>
+        <a href="#">ប្រើតួ AI</a>
+        <a href="#">ប្រើសម្លេង AI</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <section class="app-card">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="thai-tab">Thai Idea</button>
+        <button class="tab-btn" data-tab="english-tab">English Idea</button>
+      </div>
+
+      <div id="thai-tab" class="tab-panel active">        
+        <p class="subtitle">Fill the fields or select from dropdowns and generate a ready-to-use prompt.</p>
+
+        <form id="promptForm">
+          <div class="form-group">
+            <label for="character">Character</label>
+            <select id="character" class="form-control">
+              <option value="ชายสูงอายุ" selected>ชายสูงอายุ - Elderly man</option>
+<option value="หญิงสูงอายุ">หญิงสูงอายุ - Elderly woman</option>
+<option value="ชายวัยกลางคน">ชายวัยกลางคน - Middle-aged man</option>
+<option value="หญิงวัยกลางคน">หญิงวัยกลางคน - Middle-aged woman</option>
+<option value="ชายหนุ่ม">ชายหนุ่ม - Young man</option>
+<option value="หญิงสาว">หญิงสาว - Young woman</option>
+<option value="เด็กผู้ชายวัยรุ่น">เด็กผู้ชายวัยรุ่น - Teen boy</option>
+<option value="เด็กผู้หญิงวัยรุ่น">เด็กผู้หญิงวัยรุ่น - Teen girl</option>
+<option value="เด็กผู้ชาย">เด็กผู้ชาย - Child boy</option>
+<option value="เด็กผู้หญิง">เด็กผู้หญิง - Child girl</option>
+<option value="ครูผู้หญิง">ครูผู้หญิง - Teacher woman</option>
+<option value="ชาวนาผู้ชาย">ชาวนาผู้ชาย - Farmer man</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="appearance">Appearance</label>
+            <select id="appearance" class="form-control">
+<option value="ผมสีเทา ริ้วรอยลึก เสื้อเชิ้ตเรียบง่าย" selected>ผมสีเทา ริ้วรอยลึก เสื้อเชิ้ตเรียบง่าย - Grey hair, deep wrinkles, simple shirt</option>
+<option value="ผมสั้นสีดำ แว่นตา ชุดทางการ">ผมสั้นสีดำ แว่นตา ชุดทางการ - Short black hair, glasses, formal attire</option>
+<option value="ผมยาวสีน้ำตาล ชุดลำลอง กระ">ผมยาวสีน้ำตาล ชุดลำลอง กระ - Long brown hair, casual dress, freckles</option>
+<option value="ผมหยิกสีแดง เสื้อแจ็คเก็ตเดนิม รองเท้าผ้าใบ">ผมหยิกสีแดง เสื้อแจ็คเก็ตเดนิม รองเท้าผ้าใบ - Curly red hair, denim jacket, sneakers</option>
+<option value="ศีรษะล้าน เครา เสื้อแจ็คเก็ตหนัง">ศีรษะล้าน เครา เสื้อแจ็คเก็ตหนัง - Bald head, beard, leather jacket</option>
+<option value="ผมหยักศกสีบลอนด์ เสื้อยืด กางเกงยีนส์">ผมหยักศกสีบลอนด์ เสื้อยืด กางเกงยีนส์ - Wavy blonde hair, t-shirt, jeans</option>
+<option value="ผมยาวสีขาว เสื้อคลุมหรูหรา">ผมยาวสีขาว เสื้อคลุมหรูหรา - Long white hair, elegant robe</option>
+<option value="ผมสั้นสีน้ำตาล ผ้าพันคอ เสื้อโค้ทกันหนาว">ผมสั้นสีน้ำตาล ผ้าพันคอ เสื้อโค้ทกันหนาว - Short brown hair, scarf, warm coat</option>
+<option value="ผมสีดำยุ่ง เสื้อฮู้ดดี้ รองเท้าผ้าใบ">ผมสีดำยุ่ง เสื้อฮู้ดดี้ รองเท้าผ้าใบ - Messy black hair, hoodie, sneakers</option>
+<option value="ผมหางม้า เสื้อแจ็คเก็ตสีสด รองเท้าบูท">ผมหางม้า เสื้อแจ็คเก็ตสีสด รองเท้าบูท - Ponytail, bright jacket, boots</option>
+<option value="ผมสีเงิน แว่นตา เสื้อคาร์ดิแกน">ผมสีเงิน แว่นตา เสื้อคาร์ดิแกน - Silver hair, glasses, cardigan</option>
+<option value="ผมยาวระดับไหล่ ผ้ากันเปื้อน ผ้าพันคอสีสันสด">ผมยาวระดับไหล่ ผ้ากันเปื้อน ผ้าพันคอสีสันสด - Shoulder-length hair, apron, colorful scarf</option>
+<option value="ศีรษะโกน แขนมีรอยสัก เสื้อกล้าม">ศีรษะโกน แขนมีรอยสัก เสื้อกล้าม - Shaved head, tattooed arms, tank top</option>
+<option value="ผมหยิกสีเทา ชุดเดรสลายดอกไม้ ต่างหู">ผมหยิกสีเทา ชุดเดรสลายดอกไม้ ต่างหู - Curly grey hair, floral dress, earrings</option>
+<option value="ผมสั้น เสื้อฮู้ดดี้ กระเป๋าเป้">ผมสั้น เสื้อฮู้ดดี้ กระเป๋าเป้ - Short hair, hoodie, backpack</option>
+<option value="ผมยาวสีดำ ชุดพื้นเมือง">ผมยาวสีดำ ชุดพื้นเมือง - Long black hair, traditional clothing</option>
+<option value="เครา เสื้อเชิ้ตลำลอง สายเอี๊ยม">เครา เสื้อเชิ้ตลำลอง สายเอี๊ยม - Beard, casual shirt, suspenders</option>
+<option value="ผมหยิกสีน้ำตาล ชุดกีฬา">ผมหยิกสีน้ำตาล ชุดกีฬา - Curly brown hair, athletic outfit</option>
+<option value="ผมถักเปีย เสื้อคลุมเรียบง่าย">ผมถักเปีย เสื้อคลุมเรียบง่าย - Braided hair, simple tunic</option>
+<option value="ทรงผมโมฮอว์ก เสื้อกั๊กหนัง แหวน">ทรงผมโมฮอว์ก เสื้อกั๊กหนัง แหวน - Mohawk hair, leather vest, rings</option>
+</select>
+          </div>
+
+          <div class="form-group">
+            <label for="environment">Environment</label>
+            <select id="environment" class="form-control">
+<option value="ถนนบราวน์สโตนเงียบสงบ" selected>ถนนบราวน์สโตนเงียบสงบ - Quiet brownstone street</option>
+<option value="ทางเท้าในเมืองที่พลุกพล่าน">ทางเท้าในเมืองที่พลุกพล่าน - Busy city sidewalk</option>
+<option value="ทางเดินในสวนที่ปกคลุมด้วยหิมะ">ทางเดินในสวนที่ปกคลุมด้วยหิมะ - Snowy park path</option>
+<option value="ชายหาดเงียบเหงายามพระอาทิตย์ตก">ชายหาดเงียบเหงายามพระอาทิตย์ตก - Deserted beach at sunset</option>
+<option value="เส้นทางเดินป่าบนภูเขา">เส้นทางเดินป่าบนภูเขา - Mountain hiking trail</option>
+<option value="ท่าเรือไม้เก่า">ท่าเรือไม้เก่า - Old wooden dock</option>
+<option value="ตรอกหมู่บ้านเล็ก">ตรอกหมู่บ้านเล็ก - Small village alley</option>
+<option value="ตลาดที่คึกคัก">ตลาดที่คึกคัก - Bustling marketplace</option>
+<option value="ภายในห้องสมุดบรรยากาศอบอุ่น">ภายในห้องสมุดบรรยากาศอบอุ่น - Cozy library interior</option>
+<option value="มุมร้านกาแฟ">มุมร้านกาแฟ - Coffee shop corner</option>
+<option value="ห้องรอในโรงพยาบาล">ห้องรอในโรงพยาบาล - Hospital waiting room</option>
+<option value="ชานชาลาสถานีรถไฟ">ชานชาลาสถานีรถไฟ - Train station platform</option>
+<option value="ลานโล่งในป่า">ลานโล่งในป่า - Forest clearing</option>
+<option value="ถนนในเมืองยามฝนตก">ถนนในเมืองยามฝนตก - Rainy urban street</option>
+<option value="สวนดอกไม้">สวนดอกไม้ - Flower garden</option>
+<option value="ระเบียงดาดฟ้า">ระเบียงดาดฟ้า - Rooftop terrace</option>
+<option value="ทุ่งนา">ทุ่งนา - Farm field</option>
+<option value="สนามเด็กเล่นพร้อมชิงช้า">สนามเด็กเล่นพร้อมชิงช้า - Playground with swings</option>
+<option value="ท่าเรือริมทะเลสาบ">ท่าเรือริมทะเลสาบ - Lakeside pier</option>
+<option value="ภายในกระท่อมไม้แบบชนบท">ภายในกระท่อมไม้แบบชนบท - Rustic cabin interior</option>
+</select>
+          </div>
+
+          <div class="form-group">
+            <label for="atmosphere">Atmosphere</label>
+            <select id="atmosphere" class="form-control">
+<option value="แสงแดดยามบ่ายปลายวันที่อบอุ่น" selected>แสงแดดยามบ่ายปลายวันที่อบอุ่น - Warm late-afternoon sunlight</option>
+<option value="หมอกยามเช้าตรู่">หมอกยามเช้าตรู่ - Early morning fog</option>
+<option value="แสงสีทองช่วงโกลเดนอะวร์">แสงสีทองช่วงโกลเดนอะวร์ - Golden hour glow</option>
+<option value="ท้องฟ้าครึ้มเมฆนุ่มนวล">ท้องฟ้าครึ้มเมฆนุ่มนวล - Soft overcast sky</option>
+<option value="หิมะตกเบาๆ">หิมะตกเบาๆ - Light snowfall</option>
+<option value="ฝนตกปรอยๆ">ฝนตกปรอยๆ - Gentle rain</option>
+<option value="หมอกยามเช้า">หมอกยามเช้า - Misty morning</option>
+<option value="พลบค่ำกับแสงไฟในเมือง">พลบค่ำกับแสงไฟในเมือง - Twilight with city lights</option>
+<option value="วันที่แดดสดใส">วันที่แดดสดใส - Bright sunny day</option>
+<option value="วันที่มีเมฆครึ้มสงบ">วันที่มีเมฆครึ้มสงบ - Calm cloudy day</option>
+<option value="พระอาทิตย์ตกโทนสีอบอุ่น">พระอาทิตย์ตกโทนสีอบอุ่น - Sunset with warm tones</option>
+<option value="แสงจันทร์นุ่มนวล">แสงจันทร์นุ่มนวล - Soft moonlight</option>
+<option value="ลมเย็นยามเย็น">ลมเย็นยามเย็น - Breezy evening</option>
+<option value="เช้าเขตร้อนอากาศชื้น">เช้าเขตร้อนอากาศชื้น - Humid tropical morning</option>
+<option value="อากาศใบไม้ร่วงสดชื่น">อากาศใบไม้ร่วงสดชื่น - Crisp autumn air</option>
+<option value="เช้าฤดูใบไม้ผลิที่อบอุ่น">เช้าฤดูใบไม้ผลิที่อบอุ่น - Warm spring morning</option>
+<option value="บ่ายฤดูหนาวอากาศหนาว">บ่ายฤดูหนาวอากาศหนาว - Cold winter afternoon</option>
+<option value="คืนเงียบสงบที่มีดาว">คืนเงียบสงบที่มีดาว - Quiet night with stars</option>
+<option value="แสงไฟเทศกาลสีสันสดใส">แสงไฟเทศกาลสีสันสดใส - Vibrant festival lighting</option>
+<option value="รุ่งอรุณที่สงบ">รุ่งอรุณที่สงบ - Peaceful dawn</option>
+</select>
+          </div>
+
+          <div class="form-group">
+            <label for="objectNear">Object Near Character</label>
+            <select id="objectNear" class="form-control">
+<option value="ถ้วยกาแฟร้อน" selected>ถ้วยกาแฟร้อน - Cup of hot coffee</option>
+<option value="หนังสือปกหนังเก่า">หนังสือปกหนังเก่า - Old leather book</option>
+<option value="กระเป๋าเป้">กระเป๋าเป้ - Backpack</option>
+<option value="ไม้เท้า">ไม้เท้า - Walking cane</option>
+<option value="ตะกร้าดอกไม้">ตะกร้าดอกไม้ - Basket of flowers</option>
+<option value="กีตาร์">กีตาร์ - Guitar</option>
+<option value="ร่ม">ร่ม - Umbrella</option>
+<option value="พู่กันและจานสี">พู่กันและจานสี - Paintbrush and palette</option>
+<option value="สมุดโน้ตและปากกา">สมุดโน้ตและปากกา - Notebook and pen</option>
+<option value="กล้องถ่ายรูปวินเทจ">กล้องถ่ายรูปวินเทจ - Vintage camera</option>
+<option value="กล้องส่องทางไกล">กล้องส่องทางไกล - Pair of binoculars</option>
+<option value="สุนัขตัวเล็ก">สุนัขตัวเล็ก - Small dog</option>
+<option value="ที่ให้อาหารนก">ที่ให้อาหารนก - Bird feeder</option>
+<option value="แก้วชาร้อน">แก้วชาร้อน - Mug of tea</option>
+<option value="ตะกร้าผลไม้">ตะกร้าผลไม้ - Basket of fruits</option>
+<option value="ลังไม้">ลังไม้ - Wooden crate</option>
+<option value="แล็ปท็อปบนโต๊ะ">แล็ปท็อปบนโต๊ะ - Laptop on a table</option>
+<option value="ขวดน้ำผึ้ง">ขวดน้ำผึ้ง - Jar of honey</option>
+<option value="ผ้าห่ม">ผ้าห่ม - Blanket</option>
+<option value="หนังสือพิมพ์">หนังสือพิมพ์ - Newspaper</option>
+</select>
+          </div>
+
+          <div class="form-group">
+            <label for="dialogue1">Dialogue Line 1</label>
+            <textarea id="dialogue1" class="form-control"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="dialogue2">Dialogue Line 2</label>
+            <textarea id="dialogue2" class="form-control"></textarea>
+          </div>
+
+          <div class="actions">
+            <button type="button" class="btn" id="generateBtn">Generate Prompt</button>
+            <button type="button" class="btn" id="copyBtn">Copy Prompt</button>
+          </div>
+
+          <div id="outputBox" class="output-box"></div>
+        </form>
+      </div>
+
+      <div id="english-tab" class="tab-panel">
+        <div class="placeholder-box">
+          English Idea tab content goes here.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
