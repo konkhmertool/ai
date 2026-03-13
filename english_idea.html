@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Video Prompt Generator - English Idea</title>
-  <link rel="stylesheet" href="style/style.css">
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Video Prompt Generator - Thai Idea</title>    
+  <link rel="icon" href="icon/app.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style/style.css">  
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<script src="js/script.js"></script>
-	<script src="js/english_idea_script.js"></script>
+<script src="js/english_idea_script.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -30,10 +31,172 @@
       </div>
 
       <div class="tab-panel active">
-        <h1 class="title">English Idea</h1>
-        <div class="placeholder-box">
-          English Idea page content goes here.
-        </div>
+        <h1 class="title">Video Prompt Generator</h1>
+        <p class="subtitle">Fill the fields and generate a prompt</p>
+
+        <form id="promptForm">
+          <div class="form-group">
+            <label for="character">Character</label>
+            <select id="character" class="form-control">
+              <option value="Elderly man" selected>Elderly man</option>
+<option value="Elderly woman">Elderly woman</option>
+<option value="Middle-aged man">Middle-aged man</option>
+<option value="Middle-aged woman">Middle-aged woman</option>
+<option value="Young man">Young man</option>
+<option value="Young woman">Young woman</option>
+<option value="Teen boy">Teen boy</option>
+<option value="Teen girl">Teen girl</option>
+<option value="Child boy">Child boy</option>
+<option value="Child girl">Child girl</option>
+<option value="Veteran man">Veteran man</option>
+<option value="Artist woman">Artist woman</option>
+<option value="Scientist man">Scientist man</option>
+<option value="Teacher woman">Teacher woman</option>
+<option value="Farmer man">Farmer man</option>
+<option value="Musician woman">Musician woman</option>
+<option value="Chef man">Chef man</option>
+<option value="Nurse woman">Nurse woman</option>
+<option value="Traveler young man">Traveler young man</option>
+<option value="Traveler young woman">Traveler young woman</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="appearance">Appearance</label>
+            <select id="appearance" class="form-control">
+              <option value="Grey hair, deep wrinkles, simple shirt" selected>Grey hair, deep wrinkles, simple shirt</option>
+<option value="Short black hair, glasses, formal attire">Short black hair, glasses, formal attire</option>
+<option value="Long brown hair, casual dress, freckles">Long brown hair, casual dress, freckles</option>
+<option value="Curly red hair, denim jacket, sneakers">Curly red hair, denim jacket, sneakers</option>
+<option value="Bald head, beard, leather jacket">Bald head, beard, leather jacket</option>
+<option value="Wavy blonde hair, t-shirt, jeans">Wavy blonde hair, t-shirt, jeans</option>
+<option value="Long white hair, elegant robe">Long white hair, elegant robe</option>
+<option value="Short brown hair, scarf, warm coat">Short brown hair, scarf, warm coat</option>
+<option value="Messy black hair, hoodie, sneakers">Messy black hair, hoodie, sneakers</option>
+<option value="Ponytail, bright jacket, boots">Ponytail, bright jacket, boots</option>
+<option value="Silver hair, glasses, cardigan">Silver hair, glasses, cardigan</option>
+<option value="Shoulder-length hair, apron, colorful scarf">Shoulder-length hair, apron, colorful scarf</option>
+<option value="Shaved head, tattooed arms, tank top">Shaved head, tattooed arms, tank top</option>
+<option value="Curly grey hair, floral dress, earrings">Curly grey hair, floral dress, earrings</option>
+<option value="Short hair, hoodie, backpack">Short hair, hoodie, backpack</option>
+<option value="Long black hair, traditional clothing">Long black hair, traditional clothing</option>
+<option value="Beard, casual shirt, suspenders">Beard, casual shirt, suspenders</option>
+<option value="Curly brown hair, athletic outfit">Curly brown hair, athletic outfit</option>
+<option value="Braided hair, simple tunic">Braided hair, simple tunic</option>
+<option value="Mohawk hair, leather vest, rings">Mohawk hair, leather vest, rings</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="environment">Environment</label>
+            <select id="environment" class="form-control">
+             <option value="Quiet brownstone street" selected>Quiet brownstone street</option>
+<option value="Busy city sidewalk">Busy city sidewalk</option>
+<option value="Snowy park path">Snowy park path</option>
+<option value="Deserted beach at sunset">Deserted beach at sunset</option>
+<option value="Mountain hiking trail">Mountain hiking trail</option>
+<option value="Old wooden dock">Old wooden dock</option>
+<option value="Small village alley">Small village alley</option>
+<option value="Bustling marketplace">Bustling marketplace</option>
+<option value="Cozy library interior">Cozy library interior</option>
+<option value="Coffee shop corner">Coffee shop corner</option>
+<option value="Hospital waiting room">Hospital waiting room</option>
+<option value="Train station platform">Train station platform</option>
+<option value="Forest clearing">Forest clearing</option>
+<option value="Rainy urban street">Rainy urban street</option>
+<option value="Flower garden">Flower garden</option>
+<option value="Rooftop terrace">Rooftop terrace</option>
+<option value="Farm field">Farm field</option>
+<option value="Playground with swings">Playground with swings</option>
+<option value="Lakeside pier">Lakeside pier</option>
+<option value="Rustic cabin interior">Rustic cabin interior</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="atmosphere">Atmosphere</label>
+            <select id="atmosphere" class="form-control">
+              <option value="Warm late-afternoon sunlight" selected>Warm late-afternoon sunlight</option>
+<option value="Early morning fog">Early morning fog</option>
+<option value="Golden hour glow">Golden hour glow</option>
+<option value="Soft overcast sky">Soft overcast sky</option>
+<option value="Light snowfall">Light snowfall</option>
+<option value="Gentle rain">Gentle rain</option>
+<option value="Misty morning">Misty morning</option>
+<option value="Twilight with city lights">Twilight with city lights</option>
+<option value="Bright sunny day">Bright sunny day</option>
+<option value="Calm cloudy day">Calm cloudy day</option>
+<option value="Sunset with warm tones">Sunset with warm tones</option>
+<option value="Soft moonlight">Soft moonlight</option>
+<option value="Breezy evening">Breezy evening</option>
+<option value="Humid tropical morning">Humid tropical morning</option>
+<option value="Crisp autumn air">Crisp autumn air</option>
+<option value="Warm spring morning">Warm spring morning</option>
+<option value="Cold winter afternoon">Cold winter afternoon</option>
+<option value="Quiet night with stars">Quiet night with stars</option>
+<option value="Vibrant festival lighting">Vibrant festival lighting</option>
+<option value="Peaceful dawn">Peaceful dawn</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="objectNear">Object Near Character</label>
+            <select id="objectNear" class="form-control">
+              <option value="Cup of hot coffee" selected>Cup of hot coffee</option>
+<option value="Old leather book">Old leather book</option>
+<option value="Backpack">Backpack</option>
+<option value="Walking cane">Walking cane</option>
+<option value="Basket of flowers">Basket of flowers</option>
+<option value="Guitar">Guitar</option>
+<option value="Umbrella">Umbrella</option>
+<option value="Paintbrush and palette">Paintbrush and palette</option>
+<option value="Notebook and pen">Notebook and pen</option>
+<option value="Vintage camera">Vintage camera</option>
+<option value="Pair of binoculars">Pair of binoculars</option>
+<option value="Small dog">Small dog</option>
+<option value="Bird feeder">Bird feeder</option>
+<option value="Mug of tea">Mug of tea</option>
+<option value="Basket of fruits">Basket of fruits</option>
+<option value="Wooden crate">Wooden crate</option>
+<option value="Laptop on a table">Laptop on a table</option>
+<option value="Jar of honey">Jar of honey</option>
+<option value="Blanket">Blanket</option>
+<option value="Newspaper">Newspaper</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="dialogue1">Dialogue Line 1<span class="paste-label" data-target="dialogue1">(📝Paste)</span></label>
+            <textarea id="dialogue1" class="form-control"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="dialogue2">Dialogue Line 2<span class="paste-label" data-target="dialogue2">(📝Paste)</span></label>
+            <textarea id="dialogue2" class="form-control"></textarea>
+          </div>
+			<div class="form-group radio-group">
+  <label>Video Model</label>
+
+  <div class="radio-row">
+    <label class="radio-item">
+      <input type="radio" name="video_model" value="1" checked>
+      SORA (15 seconds)
+    </label>
+
+    <label class="radio-item">
+      <input type="radio" name="video_model" value="2">
+      FLOW / VEO (08 seconds)
+    </label>
+  </div>
+</div>
+          <div class="actions">
+            <button type="button" class="btn" id="generateBtn">Generate Prompt</button>
+            <button type="button" class="btn" id="copyBtn">Copy Prompt</button>
+			<span id="copiedMsg" class="copied-label">Copied.</span>
+          </div>
+
+          <div id="outputBox" class="output-box"></div>
+        </form>
       </div>
     </section>
   </main>
