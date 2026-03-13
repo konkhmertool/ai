@@ -61,10 +61,17 @@ Style: Emotional storytelling, gentle slow motion
 Lighting: Soft natural light
 Audio: Natural voice with environmental ambience. No music.
 
-Character: ${character}
-Appearance: ${appearance}
-Environment: ${environment}
-Atmosphere: ${atmosphere}
+Character:
+- ${character}
+
+Appearance:
+- ${appearance}
+
+Environment:
+- ${environment}
+
+Atmosphere:
+- ${atmosphere}
 
 Scene Description: The character is in ${environment}. A ${objectNear} is nearby. The atmosphere feels ${atmosphere}.
 
