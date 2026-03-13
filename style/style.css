@@ -47,7 +47,7 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f3f3f3;color:#1
 
 select.form-control{height:32px;}
 
-textarea.form-control{min-height:90px;resize:vertical;}
+textarea.form-control{min-height:70px;resize:vertical;}
 
 
 .actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
