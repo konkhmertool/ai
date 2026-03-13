@@ -26,14 +26,14 @@ return;
 
     let durationText = "15 seconds";
     let cameraTimeline = `Camera Timeline
-0:00 – 0:03
+00:00 – 00:03
 Close-up shot of the character's face.
 
-0:03 – 0:10
+00:03 – 00:10
 The character looks at the camera and speaks:
 "${dialogue1}"
 
-0:10 – 0:15
+00:10 – 00:15
 Camera slowly pulls back revealing the environment.
 The character finishes:
 "${dialogue2}"`;
@@ -41,14 +41,14 @@ The character finishes:
     if (videoModel === "2") {
       durationText = "08 seconds";
       cameraTimeline = `Camera Timeline
-0:00 – 0:01
+00:00 – 00:01
 Close-up shot of the character's face.
 
-0:01 – 0:05
+00:01 – 00:05
 The character looks at the camera and speaks:
 "${dialogue1}"
 
-0:05 – 0:08
+00:05 – 00:08
 Camera slowly pulls back revealing the environment.
 The character finishes:
 "${dialogue2}"`;

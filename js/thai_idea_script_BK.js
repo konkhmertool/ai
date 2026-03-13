@@ -25,53 +25,47 @@ return;
     }
 
     let durationText = "15 วินาที";
-    let cameraTimeline = `การกระทำ:
-- เวลา 00:00 – 00:03
+    let cameraTimeline = `ลำดับกล้อง
+00:00 – 00:03
 ภาพระยะใกล้ของใบหน้าตัวละคร
-- เวลา 00:03 – 00:10
-ตัวละครมองไปที่กล้องและพูดว่า: 
+
+00:03 – 00:10
+ตัวละครมองไปที่กล้องและพูดว่า:
 "${dialogue1}"
-- เวลา 00:10 – 00:15
-กล้องค่อยๆ ถอยออกเผยให้เห็นสภาพแวดล้อม 
-ตัวละครยังคงมองไปที่กล้องและพูดจนจบ:
+
+00:10 – 00:15
+กล้องค่อยๆ ถอยออกเผยให้เห็นสภาพแวดล้อม
+ตัวละครพูดจบ:
 "${dialogue2}"`;
 
     if (videoModel === "2") {
       durationText = "08 วินาที";
-      cameraTimeline = `การกระทำ:
-- เวลา 00:00 – 00:01
+      cameraTimeline = `ลำดับกล้อง
+00:00 – 00:01
 ภาพระยะใกล้ของใบหน้าตัวละคร
-- เวลา 00:01 – 00:05
+
+00:01 – 00:05
 ตัวละครมองไปที่กล้องและพูดว่า:
 "${dialogue1}"
-- เวลา 00:05 – 00:08
-กล้องค่อยๆ ถอยออกเผยให้เห็นสภาพแวดล้อม. 
-ตัวละครยังคงมองไปที่กล้องและพูดจนจบ: 
+
+00:05 – 00:08
+กล้องค่อยๆ ถอยออกเผยให้เห็นสภาพแวดล้อม
+ตัวละครพูดจบ:
 "${dialogue2}"`;
     }
 
-    const prompt = `Global Specs:
-- Vertical 9:16 (1080x1920)
-- GoPro Hero 12 RAW style
-- Duration: 15 ${durationText}
-- Camera: Stable handheld camera, natural human perspective, no cinematic effects
-- Color: Clean neutral daylight color, realistic white balance, no golden hour lighting, no warm cinematic color grading
-- Lighting: Natural white daylight, no warm tone, no cinematic color grading
-- Audio: Natural speech with ambient sounds, no music
+    const prompt = `รูปแบบ: แนวตั้ง 9:16
+ระยะเวลา: ${durationText}
+คุณภาพ: 4K Ultra HD, วิดีโอภาพจริง การบันทึกแบบดิบ ไม่มีการปรับสีแบบภาพยนตร์ ใช้สีแสงธรรมชาติเท่านั้น เสียงสมจริง สไตล์สารคดี
+สไตล์: การเล่าเรื่องเชิงอารมณ์ ภาพเคลื่อนไหวช้าอย่างนุ่มนวล
+เสียง: เสียงพูดตามธรรมชาติพร้อมเสียงบรรยากาศรอบข้าง ไม่มีดนตรี
 
-สภาพแวดล้อม: 
-- ${environment}
-
-ตัวละคร: 
-- ${character}
-
-ลักษณะภายนอก: 
-- ${appearance}
-
+ตัวละคร: ${character}
+ลักษณะภายนอก: ${appearance}
+สภาพแวดล้อม: ${environment}
 บรรยากาศ: ${atmosphere}
 
-คำอธิบายฉาก: 
-- ตัวละครอยู่ใน ${environment} มี ${objectNear} อยู่ใกล้ๆ บรรยากาศให้ความรู้สึก ${atmosphere}
+คำอธิบายฉาก: ตัวละครอยู่ใน ${environment} มี ${objectNear} อยู่ใกล้ๆ บรรยากาศให้ความรู้สึก ${atmosphere}
 
 ${cameraTimeline}`;
 
