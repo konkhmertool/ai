@@ -50,14 +50,14 @@ return;
 "${dialogue2}"`;
     }
 
-    const prompt = `Global Specs:
-- Vertical 9:16 (1080x1920)
-- GoPro Hero 12 RAW style
-- Duration: ${durationText}
-- Camera: Stable handheld camera, natural human perspective, no cinematic effects
-- Color: Clean neutral daylight color, realistic white balance, no golden hour lighting, no warm cinematic color grading
-- Lighting: Natural white daylight, no warm tone, no cinematic color grading
-- Audio: Natural speech with ambient sounds, no music
+    const prompt = `ข้อกำหนดหลัก (Global Specs):
+- วิดีโอแนวตั้ง 9:16 (1080x1920)
+- สไตล์ภาพ GoPro Hero 12 RAW
+- ระยะเวลา: 15 วินาที
+- กล้อง: ถือกล้องด้วยมืออย่างมั่นคง มุมมองเหมือนสายตามนุษย์ตามธรรมชาติ ไม่มีเอฟเฟกต์แบบภาพยนตร์
+- สี: โทนสีแสงกลางวันธรรมชาติที่เป็นกลาง สมดุลแสงขาวสมจริง ไม่มีแสงช่วงโกลเดนอะวร์ และไม่มีการปรับสีโทนอุ่นแบบภาพยนตร์
+- แสง: แสงกลางวันสีขาวตามธรรมชาติ ไม่มีโทนอุ่น และไม่มีการเกรดสีแบบภาพยนตร์
+- เสียง: เสียงพูดตามธรรมชาติพร้อมเสียงบรรยากาศจริง ไม่มีดนตรี
 
 สภาพแวดล้อม: 
 - ${environment}

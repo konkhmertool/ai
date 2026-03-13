@@ -25,36 +25,36 @@ return;
     }
 
     let durationText = "15 seconds";
-    let cameraTimeline = `Camera Timeline
-00:00 – 00:03
+    let cameraTimeline = `Action:
+- At 00:00 – 00:03
 Close-up shot of the character's face.
 
-00:03 – 00:10
+- At 00:03 – 00:10
 The character looks at the camera and speaks:
 "${dialogue1}"
 
-00:10 – 00:15
+At 00:10 – 00:15
 Camera slowly pulls back revealing the environment.
 The character finishes:
 "${dialogue2}"`;
 
     if (videoModel === "2") {
       durationText = "08 seconds";
-      cameraTimeline = `Camera Timeline
-00:00 – 00:01
+      cameraTimeline = `Action:
+- At 00:00 – 00:01
 Close-up shot of the character's face.
 
-00:01 – 00:05
+At 00:01 – 00:05
 The character looks at the camera and speaks:
 "${dialogue1}"
 
-00:05 – 00:08
+At 00:05 – 00:08
 Camera slowly pulls back revealing the environment.
-The character finishes:
+The character still look at camera and finishes:
 "${dialogue2}"`;
     }
 
-    const prompt = `Format: Vertical 9:16
+    const prompt = `Global Specs: Vertical 9:16
 Duration: ${durationText}
 Quality: 4K Ultra HD, cinematic realism, ultra-detailed
 Style: Emotional storytelling, gentle slow motion 
@@ -93,7 +93,6 @@ $("#copiedMsg")
 
 $("#dialogue1").val("").focus();
 $("#dialogue2").val("");
-$("#outputBox").text("").hide();
 
 }); // end #copiedMsg
 
