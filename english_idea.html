@@ -12,16 +12,19 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="header-inner">
-      <div class="logo">កូនខ្មែរ TOOL</div>
-      <nav class="nav-menu">
-        <a href="#">ទំព័រដើម</a>
-        <a href="#">បង្កើតវីដេអូ</a>
-        <a href="#">ប្រើតួ AI</a>
-        <a href="#">ប្រើសម្លេង AI</a>
-      </nav>
-    </div>
-  </header>
+<div class="header-inner">
+<div class="logo">កូនខ្មែរ<span>TOOL</span></div>
+
+<button type="button" class="menu-toggle" id="menuToggle">☰</button>
+
+<nav class="nav-menu" id="mainMenu">
+<a href="index.html">ទំព័រដើម</a>
+<a href="#">បង្កើតវីដេអូ</a>
+<a href="#">ប្រើតួ AI</a>
+<a href="#">ប្រើសម្លេង AI</a>
+</nav>
+</div>
+</header>
 
   <main class="page-wrap">
     <section class="app-card">
@@ -31,9 +34,7 @@
       </div>
 
       <div class="tab-panel active">
-        <h1 class="title">Video Prompt Generator</h1>
-        <p class="subtitle">Fill the fields and generate a prompt</p>
-
+        <h1 class="title">Video Prompt Generator</h1>        
         <form id="promptForm">
           <div class="form-group">
             <label for="character">Character</label>
