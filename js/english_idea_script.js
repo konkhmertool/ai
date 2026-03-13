@@ -54,12 +54,13 @@ The character still look at camera and finishes:
 "${dialogue2}"`;
     }
 
-    const prompt = `Global Specs: Vertical 9:16
-Duration: ${durationText}
-Quality: 4K Ultra HD, cinematic realism, ultra-detailed
-Style: Emotional storytelling, gentle slow motion 
-Lighting: Soft natural light
-Audio: Natural voice with environmental ambience. No music.
+    const prompt = `Global Specs: 
+- Vertical 9:16 (1080x1920)
+- Duration: ${durationText}
+- Camera: 4K Ultra HD, Stable handheld camera, natural human perspective, no cinematic effects
+- Style: Emotional storytelling, gentle slow motion 
+- Color: Clean neutral daylight color, realistic white balance, no golden hour lighting, no warm cinematic color grading
+- Lighting: Natural white daylight, no warm tone, no cinematic color grading - Audio: Natural speech with ambient sounds, no music
 
 Character:
 - ${character}
