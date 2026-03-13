@@ -12,8 +12,16 @@ $(function () {
     const videoModel = $('input[name="video_model"]:checked').val();
 
     if (!character || !appearance || !environment || !atmosphere || !objectNear || !dialogue1 || !dialogue2 || !videoModel) {
-      alert("Please fill all fields before generating.");
-      return;
+      $("#copiedMsg")
+.removeClass("label-success")
+.addClass("label-error")
+.text("Please fill all the fields before generate.")
+.stop(true,true)
+.fadeIn(200)
+.delay(1600)
+.fadeOut(700);
+
+return;
     }
 
     let durationText = "15 วินาที";
@@ -48,8 +56,8 @@ ${dialogue2}`;
 
     const prompt = `รูปแบบ: แนวตั้ง 9:16
 ระยะเวลา: ${durationText}
-คุณภาพ: 4K Ultra HD
-สไตล์: วิดีโอเหมือนภาพจริง การบันทึกแบบดิบ ไม่มีการปรับสีแบบภาพยนตร์ ใช้สีแสงธรรมชาติเท่านั้น ไม่มีโทนแสงสีทองหรือโทนอุ่น
+คุณภาพ: 4K Ultra HD, วิดีโอภาพจริง การบันทึกแบบดิบ ไม่มีการปรับสีแบบภาพยนตร์ ใช้สีแสงธรรมชาติเท่านั้น เสียงสมจริง สไตล์สารคดี
+สไตล์: การเล่าเรื่องเชิงอารมณ์ ภาพเคลื่อนไหวช้าอย่างนุ่มนวล
 เสียง: เสียงพูดตามธรรมชาติพร้อมเสียงบรรยากาศรอบข้าง ไม่มีดนตรี
 
 ตัวละคร: ${character}
@@ -65,23 +73,41 @@ ${cameraTimeline}`;
 
   });
 
-  $("#copyBtn").on("click", function () {
+$("#copyBtn").off("click").on("click", function () {
 
-    const text = $("#outputBox").text().trim();
+const text = $("#outputBox").text().trim();
 
-    if (!text) {
-      alert("Generate prompt first.");
-      return;
-    }
+if (!text) return;
 
-    navigator.clipboard.writeText(text)
-      .then(function () {
-        alert("Prompt copied.");
-      })
-      .catch(function () {
-        alert("Copy failed. Please copy manually.");
-      });
+navigator.clipboard.writeText(text).then(function(){
 
-  });
+$("#copiedMsg")
+.removeClass("label-error")
+.addClass("label-success")
+.text("Copied.")
+.stop(true,true)
+.fadeIn(200)
+.delay(1200)
+.fadeOut(700, function(){
+
+$("#dialogue1").val("").focus();
+$("#dialogue2").val("");
+$("#outputBox").text("").hide();
+
+}); // end #copiedMsg
+
+});}); // End #copyBtn
+
+$(document).on("click",".paste-label",function(){
+
+const target = $(this).data("target");
+
+navigator.clipboard.readText().then(function(text){
+
+$("#"+target).val(text).focus();
+
+});
+
+});
 
 });

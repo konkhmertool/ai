@@ -32,19 +32,27 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f3f3f3;color:#1
 
 .form-group label{display:block;margin-bottom:0px;font-size:14px;font-weight:700;color:#111;}
 
-.form-control{width:100%;border:1px solid #adadad;border-radius:4px;padding:5px 7px;font-size:14px;background:#fff;outline:none;}
+.form-control{width:100%;border:1px solid #adadad;border-radius:4px;padding:5px 7px;font-size:16px;background:#fff;outline:none;}
+
+.paste-label{margin-left:6px;color:#1565d8;font-size:12px;font-weight:700;cursor:pointer;text-decoration:none;}
+.paste-label:hover{text-decoration:none;}
 
 select.form-control{height:32px;}
 
 textarea.form-control{min-height:90px;resize:vertical;}
 
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;}
+
+.actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.copied-label{display:none;font-weight:700;font-size:14px;margin-left:2px;}
+.label-success{color:#2ecc71;}
+.label-error{color:#e74c3c;}
 
 .btn{border:0;border-radius:6px;background:#49b64f;color:#fff;padding:10px 16px;font-size:14px;font-weight:700;cursor:pointer;}
 
 .btn:hover{background:#3fa445;}
 
 .output-box{margin-top:18px;padding:14px;border:1px dashed #bbb;border-radius:6px;background:#fafafa;font-size:14px;white-space:pre-wrap;display:none;}
+
 
 .placeholder-box{padding:24px 18px;border:1px dashed #b7c9ec;background:#f7fbff;border-radius:6px;color:#2250a8;font-size:15px;}
 
