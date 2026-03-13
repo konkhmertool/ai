@@ -4,7 +4,9 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f3f3f3;color:#1
 
 @font-face{font-family:'KhKoulen';src:url('../assets/fonts/kh_koulen_l.ttf') format('truetype');font-weight:normal;font-style:normal;unicode-range:U+1780-17FF;}
 @font-face{font-family:'Khmer OS Siemreap';src:url('../assets/fonts/KhmerOSSiemreap.ttf') format('truetype');font-weight:normal;font-style:normal;unicode-range:U+1780-17FF;}
+@font-face{font-family:'Kanit';src:url('../assets/fonts/Kanit-Regular.ttf') format('truetype');font-weight:400;font-style:normal;}
 
+.thai-page select.form-control{font-family:'Kanit',Arial,Helvetica,sans-serif;}
 .site-header{background:#fff;border-bottom:1px solid #d8d8d8;position:relative;}
 
 .header-inner{max-width:1100px;margin:0 auto;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;position:relative;}
