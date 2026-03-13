@@ -1,5 +1,7 @@
 $(function () {
 
+	$("#dialogue1").val("").focus();
+	
   $("#menuToggle").on("click", function () {
     $("#mainMenu").toggleClass("show");
   });

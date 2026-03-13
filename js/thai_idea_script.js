@@ -24,27 +24,27 @@ $(function () {
 return;
     }
 
-    let durationText = "15 วินาที";
+    let durationText = "15 Seconds";
     let cameraTimeline = `การกระทำ:
-- เวลา 00:00 – 00:03
+- At 00:00 – 00:03
 ภาพระยะใกล้ของใบหน้าตัวละคร
-- เวลา 00:03 – 00:10
+- At 00:03 – 00:10
 ตัวละครมองไปที่กล้องและพูดว่า: 
 "${dialogue1}"
-- เวลา 00:10 – 00:15
+- At 00:10 – 00:15
 กล้องค่อยๆ ถอยออกเผยให้เห็นสภาพแวดล้อม 
 ตัวละครยังคงมองไปที่กล้องและพูดจนจบ:
 "${dialogue2}"`;
 
     if (videoModel === "2") {
-      durationText = "08 วินาที";
+      durationText = "08 Seconds";
       cameraTimeline = `การกระทำ:
-- เวลา 00:00 – 00:01
+- At 00:00 – 00:01
 ภาพระยะใกล้ของใบหน้าตัวละคร
-- เวลา 00:01 – 00:05
+- At 00:01 – 00:05
 ตัวละครมองไปที่กล้องและพูดว่า:
 "${dialogue1}"
-- เวลา 00:05 – 00:08
+- At 00:05 – 00:08
 กล้องค่อยๆ ถอยออกเผยให้เห็นสภาพแวดล้อม. 
 ตัวละครยังคงมองไปที่กล้องและพูดจนจบ: 
 "${dialogue2}"`;
@@ -53,7 +53,7 @@ return;
     const prompt = `Global Specs:
 - Vertical 9:16 (1080x1920)
 - GoPro Hero 12 RAW style
-- Duration: 15 ${durationText}
+- Duration: ${durationText}
 - Camera: Stable handheld camera, natural human perspective, no cinematic effects
 - Color: Clean neutral daylight color, realistic white balance, no golden hour lighting, no warm cinematic color grading
 - Lighting: Natural white daylight, no warm tone, no cinematic color grading
@@ -83,7 +83,7 @@ $("#copyBtn").off("click").on("click", function () {
 
 const text = $("#outputBox").text().trim();
 
-if (!text) return;
+if (!text){$("#dialogue1").val("").focus(); return;}
 
 navigator.clipboard.writeText(text).then(function(){
 
@@ -94,11 +94,10 @@ $("#copiedMsg")
 .stop(true,true)
 .fadeIn(200)
 .delay(1200)
-.fadeOut(700, function(){
+.fadeOut(5000, function(){
 
 $("#dialogue1").val("").focus();
 $("#dialogue2").val("");
-$("#outputBox").text("").hide();
 
 }); // end #copiedMsg
 

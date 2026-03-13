@@ -89,7 +89,7 @@ $("#copiedMsg")
 .stop(true,true)
 .fadeIn(200)
 .delay(1200)
-.fadeOut(700, function(){
+.fadeOut(5000, function(){
 
 $("#dialogue1").val("").focus();
 $("#dialogue2").val("");
