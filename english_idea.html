@@ -171,7 +171,8 @@
 <span class="paste-label" data-target="dialogue1">(📝Paste)</span> 
 <span class="dialogue-tip">Best result: 4-5 Words x 4 Lines</span>
 </label>
-<textarea id="dialogue1" class="form-control"></textarea>
+<textarea id="dialogue1" class="form-control" maxlength="151"></textarea>
+<label class="lbl_wordcount" for=""><span class="spn_wordcount">0 Words/150</span></label>
 </div>
 
           <div class="form-group">
@@ -179,7 +180,8 @@
 <span class="paste-label" data-target="dialogue2">(📝Paste)</span> 
 <span class="dialogue-tip">Best result: 4-5 Words x 4 Lines</span>
 </label>
-<textarea id="dialogue2" class="form-control"></textarea>
+<textarea id="dialogue2" class="form-control" maxlength="151"></textarea>
+<label class="lbl_wordcount" for=""><span class="spn_wordcount2">0 Words/150</span></label>
 </div>
 			<div class="form-group radio-group">
   <label>Video Model</label>
@@ -195,6 +197,16 @@
       FLOW / VEO (08 seconds)
     </label>
   </div>
+</div>
+<div class="form-group radio-group">
+<label class="radio-item">
+      <input type="checkbox" id ="chb_captiononvideo" name="chb_captiononvideo" value="0">Enable Caption on Video</label>
+	  <div class="radio-row dv_optStroke" id="dv_optStroke">
+	<label class="radio-item white-stroke"><input type="radio" name="lbl_captionStroke" value="#FFFFFF" checked>WHITE</label>
+    <label class="radio-item yellow-stroke"><input type="radio" name="lbl_captionStroke" value="#FFD400">YELLOW</label>
+	<label class="radio-item green-stroke"><input type="radio" name="lbl_captionStroke" value="#FFFFFF">GREEN</label>
+    <label class="radio-item cyan-stroke"><input type="radio" name="lbl_captionStroke" value="#FFD400">CYAN</label>
+	</div>
 </div>
           <div class="actions">
             <button type="button" class="btn" id="generateBtn">Generate Prompt</button>

@@ -1,27 +1,4 @@
 $(function () {
-
-$('#dialogue1').on('input', function() {
-        // Split by spaces and filter out empty strings
-        var words = this.value.match(/\S+/g);
-        var count = words ? words.length : 0;
-		var tmpLength = $(this).val().length;
-		if (tmpLength > 100) {
-			$('.spn_wordcount').text("Limit 100 characters only.");
-			return;
-		}
-        $('.spn_wordcount').text((tmpLength) + " Words");
-    });
-	$('#dialogue2').on('input', function() {
-        // Split by spaces and filter out empty strings
-        var words = this.value.match(/\S+/g);
-        var count = words ? words.length : 0;
-		var tmpLength = $(this).val().length;
-		if (tmpLength > 100) {
-			$('.spn_wordcount2').text("Limit 100 characters only.");
-			return;
-		}
-        $('.spn_wordcount2').text((tmpLength) +" Words");
-    });
 	
   $("#generateBtn").on("click", function () {
 
@@ -215,6 +192,29 @@ $("#"+target).val(text).focus();
 
 });
 
+$('#dialogue1').on('input', function() {
+        // Split by spaces and filter out empty strings
+        var words = this.value.match(/\S+/g);
+        var count = words ? words.length : 0;
+		var tmpLength = $(this).val().length;
+		if (tmpLength > 100) {
+			$('.spn_wordcount').text("Limit 100 characters only.");
+			return;
+		}
+        $('.spn_wordcount').text((tmpLength) + " Words/100");
+    });
+	$('#dialogue2').on('input', function() {
+        // Split by spaces and filter out empty strings
+        var words = this.value.match(/\S+/g);
+        var count = words ? words.length : 0;
+		var tmpLength = $(this).val().length;
+		if (tmpLength > 100) {
+			$('.spn_wordcount2').text("Limit 100 characters only.");
+			return;
+		}
+        $('.spn_wordcount2').text((tmpLength) +" Words/100");
+    });
+	
 $('#chb_captiononvideo').change(function() {	
 	if ($(this).is(':checked')) {
 		$('#dv_optStroke').css('display', 'flex');
