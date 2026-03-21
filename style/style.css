@@ -71,7 +71,12 @@ textarea.form-control{min-height:70px;resize:vertical;}
 .radio-item{display:flex;align-items:center;font-size:14px;font-weight:600;cursor:pointer;}
 
 .radio-item input{margin-right:6px;}
-
+.dv_optStroke{display:none}
+.form-group label.lbl_wordcount{text-align: right;font-size: 10px;color: #606060;font-weight: normal;}
+.form-group label.white-stroke {color: #FFFFFF;text-shadow:1px 1px 0 black,-1px -1px 0 black,1px -1px 0 black,-1px 1px 0 black;}
+.form-group label.yellow-stroke {color: #FFD400;text-shadow:1px 1px 0 black,-1px -1px 0 black,1px -1px 0 black,-1px 1px 0 black;}
+.form-group label.green-stroke{color: #00fc06;text-shadow:1px 1px 0 black,-1px -1px 0 black,1px -1px 0 black,-1px 1px 0 black;}
+.form-group label.cyan-stroke{color: #00fcd0;text-shadow:1px 1px 0 black,-1px -1px 0 black,1px -1px 0 black,-1px 1px 0 black;}
 @media (max-width:768px){
 .page-wrap{padding-left:0;padding-right:0;}
 .header-inner{flex-direction:row;align-items:center;justify-content:space-between;}
