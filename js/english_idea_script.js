@@ -206,7 +206,7 @@ $('#dialogue1').on('input', function() {
 			$('.spn_wordcount').text("Limit 150 characters only.");
 			return;
 		}
-        $('.spn_wordcount').text((tmpLength) + " Words/100");
+        $('.spn_wordcount').text((tmpLength) + " Words/150");
     });
 	$('#dialogue2').on('input', function() {
         // Split by spaces and filter out empty strings
@@ -217,7 +217,7 @@ $('#dialogue1').on('input', function() {
 			$('.spn_wordcount2').text("Limit 150 characters only.");
 			return;
 		}
-        $('.spn_wordcount2').text((tmpLength) +" Words/100");
+        $('.spn_wordcount2').text((tmpLength) +" Words/150");
     });
 	
 $('#chb_captiononvideo').change(function() {	
